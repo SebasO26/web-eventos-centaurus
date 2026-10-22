@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0B0B14;
+    padding: 0 3vh 0 3vh;
+}
+
+.logo img{
+    width: 80px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    color: white;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    background: #A855F7;
+    border: none;
+    cursor: pointer;
+}
