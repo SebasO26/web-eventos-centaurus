@@ -1,0 +1,4 @@
+function redirection(){
+    window.location.href = "pages/login.html";
+}
+

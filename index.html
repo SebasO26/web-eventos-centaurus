@@ -1,33 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Vibra | Vive la experiencia</title>
+
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
-    <header>
-        <div class="logo">
-            <img src="img/logoVibra.jpg" alt="">
+    <main>
+        <header>
+            <a href="#" class="logo" aria-label="Vibra, inicio">
+                <img src="img/logoVibra.jpg" alt="Logo de Vibra">
+            </a>
+
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#contactos">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="session">
+                <button type="button" onclick="redirection()">Iniciar sesión</button>
+            </div>
+        </header>
+
+        <section class="info" id="inicio">
+            <div class="info-content">
+                <h3>CONCIERTOS · FESTIVALES · CULTURA</h3>
+
+                <h1>
+                    Vive la música,
+                    <span>Vive <span class="color">la experiencia</span></span>
+                </h1>
+
+                <p>
+                    Descubre los mejores eventos, conoce nuevos artistas
+                    <span>y sé parte de momentos inolvidables.</span>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contactos">
+        <a href="#inicio" class="footer-logo" aria-label="Volver al inicio">
+            <img src="img/logoVibra.jpg" alt="Logo de Vibra">
+        </a>
+
+        <p>&copy; Todos los derechos reservados.</p>
+
+        <div class="icons" aria-label="Redes sociales">
+            <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            </a>
+
+            <a href="#" aria-label="X">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+
+            <a href="mailto:contacto@vibra.com" aria-label="Correo electrónico">
+                <i class="fa-solid fa-at" aria-hidden="true"></i>
+            </a>
         </div>
-
-        <nav>
-            <ul>
-                <li>Inicio</li>
-                <li>Eventos</li>
-                <li>Contactos</li>
-            </ul>
-        </nav>
-
-        <div class="session">
-            <button>Iniciar sesión</button>
-        </div>
-    </header>
-
-    <section class="info">
-        <h3>CONCIERTOS · FESTIVALES · CULTURA</h3>
-        <h2>Vive la música, Vive la experiencia</h2>
-    </section>
+    </footer>
+    <script src="index.js"></script>
 </body>
 </html>
