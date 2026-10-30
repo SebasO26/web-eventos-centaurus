@@ -206,3 +206,8 @@ button:hover {
         padding: 30px 20px;
     }
 }
+
+.errorText {
+    color: red;
+    text-align: center;
+}
