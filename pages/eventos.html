@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,28 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../styles/eventos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="../js/modal.js" defer></script>
+    <script src="../js/guard.js"></script>
+    <script src="../index.js"></script>
 </head>
+
 <body>
     <main>
         <header>
             <a href="#" class="logo" aria-label="Vibra, inicio">
                 <img src="../img/logoVibra.jpg" alt="Logo de Vibra">
             </a>
-            
+
             <nav aria-label="Navegación principal">
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#eventos">Eventos</a></li>
-                    <li><a href="#contactos">Contactos</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contactanos.html">Contactanos</a></li>
                 </ul>
             </nav>
-            
+
             <div class="session">
-                <button type="button" onclick="">Cerrar sesión</button>
+                <button type="button" onclick="sessionOut()">Cerrar sesión</button>
             </div>
         </header>
 
@@ -38,41 +43,115 @@
         <section class="events">
             <div class="card">
                 <img src="../img/evento1.jpg" alt="">
-                <h3>Concierto</h3>
-                <h2>Rock en la plaza</h2>
-                <div class="infoEvnt">
-                    <p class="date"><i class="fa-regular fa-calendar fa-xl" style="color: rgb(255, 255, 255);"></i>15 de noviembre de 2026</p>
-                    <p class="place"><i class="fa-solid fa-location-dot fa-xl" style="color: rgb(255, 255, 255);"></i>Parque de los deseos</p>
+                <div class="textContent">
+                    <h3>Concierto</h3>
+                    <h2>Rock en la plaza</h2>
+                    <div class="infoEvnt">
+                        <p class="date"><i class="fa-regular fa-calendar fa-xl"
+                                style="color: rgb(255, 255, 255);"></i>15 de
+                            noviembre de 2026</p>
+                        <p class="place"><i class="fa-solid fa-location-dot fa-xl"
+                                style="color: rgb(255, 255, 255);"></i>Parque de los deseos</p>
+                    </div>
+                    <button class="details" onclick="openModal()">
+                        Ver detalles
+                    </button>
                 </div>
-                <button class="details">
-                    Ver detalles
-                </button>
             </div>
             <div class="card">
                 <img src="../img/evento2.jpg" alt="">
-                <h3>Festival</h3>
-                <h2>Festival Urbano</h2>
-                <div class="infoEvnt">
-                    <p class="date"><i class="fa-regular fa-calendar fa-xl" style="color: rgb(255, 255, 255);"></i>22 de Noviembre</p>
-                    <p class="place"><i class="fa-solid fa-location-dot fa-xl" style="color: rgb(255, 255, 255);"></i>Plaza Mayor</p>
+                <div class="textContent">
+                    <h3>Festival</h3>
+                    <h2>Festival Urbano</h2>
+                    <div class="infoEvnt">
+                        <p class="date"><i class="fa-regular fa-calendar fa-xl"
+                                style="color: rgb(255, 255, 255);"></i>22 de
+                            Noviembre</p>
+                        <p class="place"><i class="fa-solid fa-location-dot fa-xl"
+                                style="color: rgb(255, 255, 255);"></i>Plaza Mayor</p>
+                    </div>
+                    <button class="details">
+                        Ver detalles
+                    </button>
                 </div>
-                <button class="details">
-                    Ver Detalles
-                </button>
+
             </div>
             <div class="card">
                 <img src="../img/evento3.jpg" alt="">
-                <h3>DJ Set</h3>
-                <h2>Noche de DJs</h2>
-                <div class="infoEvnt">
-                    <p class="date"><i class="fa-regular fa-calendar fa-xl" style="color: rgb(255, 255, 255);"></i>29 de Noviembre</p>
-                    <p class="place"><i class="fa-solid fa-location-dot fa-xl" style="color: rgb(255, 255, 255);"></i>La Macarena</p>
+                <div class="textContent">
+                    <h3>DJ Set</h3>
+                    <h2>Noche de DJs</h2>
+                    <div class="infoEvnt">
+                        <p class="date"><i class="fa-regular fa-calendar fa-xl"
+                                style="color: rgb(255, 255, 255);"></i>29 de
+                            Noviembre</p>
+                        <p class="place"><i class="fa-solid fa-location-dot fa-xl"
+                                style="color: rgb(255, 255, 255);"></i>La
+                            Macarena</p>
+                    </div>
+                    <button class="details">
+                        Ver detalles
+                    </button>
                 </div>
-                <button class="details">
-                    
-                </button>
+
             </div>
         </section>
+
+        <div id="modal-overlay" class="modal-overlay">
+            <div id="modal-container" class="modal-card">
+
+                <button class="btn-back" onclick="closeModal()">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a eventos
+                </button>
+
+                <div class="modal-top">
+                    <div class="modal-main-img">
+                        <img src="../img/evento1.jpg" alt="Concierto Rock en la plaza">
+                    </div>
+
+                    <div class="modal-info-card">
+                        <span class="badge">CONCIERTO</span>
+                        <h2>Rock en la Plaza</h2>
+
+                        <div class="info-list">
+                            <p><i class="fa-regular fa-calendar"></i> 15 de noviembre de 2026</p>
+                            <p><i class="fa-regular fa-clock"></i> 7:00 p. m. - 11:00 p. m.</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Parque de los Deseos</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal-bottom">
+                    <div class="modal-details">
+                        <h3>Descripción</h3>
+                        <p>Disfruta de una noche llena de buena música, con las mejores bandas de rock de la ciudad. Un
+                            evento pensado para los amantes de este género, con una escenografía increíble y la mejor
+                            energía.</p>
+
+                        <h3>Artistas Invitados</h3>
+                        <ul>
+                            <li>Black Waves</li>
+                            <li>Los Sin Rumbo</li>
+                            <li>La Última Carta</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-extra-card">
+                        <img src="../img/concierto.jpg" alt="Ambiente">
+                        <div class="extra-content">
+                            <div class="extra-icon">
+                                <i class="fa-regular fa-circle-play"></i>
+                                <strong>¡No te lo pierdas!</strong>
+                            </div>
+                            <p>Será una noche llena de música, energía y grandes emociones.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </main>
 
     <footer id="contactos">
@@ -101,4 +180,5 @@
         </div>
     </footer>
 </body>
+
 </html>

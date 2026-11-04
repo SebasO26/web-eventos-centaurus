@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibra - Contáctanos</title>
+    <link rel="stylesheet" href="../styles/contactanos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="../js/guard.js"></script>
+</head>
+
+<body>
+
+    <main class="contact-container">
+
+        <a href="../pages/eventos.html" class="btn-back">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Regresar</span>
+        </a>
+
+        <div class="contact-card">
+
+            <section class="contact-info-panel">
+                <div class="overlay"></div>
+                <div class="info-content">
+                    <div class="icon-badge">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                    <h2>Contáctanos</h2>
+                    <p>Estamos aquí para ayudarte. Completa el formulario y te responderemos lo antes posible.</p>
+                </div>
+            </section>
+
+            <section class="contact-form-panel">
+                <form class="contact-form" action="#" method="POST">
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo <span>*</span></label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo electrónico <span>*</span></label>
+                        <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asunto">Asunto <span>*</span></label>
+                        <div class="select-wrapper">
+                            <select id="asunto" name="asunto" required>
+                                <option value="" disabled selected hidden>Selecciona un asunto</option>
+                                <option value="entradas">Información sobre entradas</option>
+                                <option value="eventos">Dudas sobre eventos</option>
+                                <option value="patrocinios">Prensa y patrocinios</option>
+                                <option value="soporte">Soporte técnico / Cuenta</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje <span>*</span></label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar mensaje</button>
+
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
