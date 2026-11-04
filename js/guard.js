@@ -1,3 +1,3 @@
-if (sessionStorage.getItem('auth') !== '1') {
+if (!sessionStorage.getItem('auth')) {
   window.location.replace('login.html');
 }
